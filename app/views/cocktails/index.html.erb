@@ -1,0 +1,75 @@
+<div class="d-flex navbar-lewagon navbar-collapse p-4">
+  <%= image_tag "logo.png", alt: "Cocktail logo", width: 80 %>
+  <%= link_to 'Add a cocktail', new_cocktail_path, class:"btn btn-light btn-lg" %>
+  <%= image_tag "caroline.png", alt: "Cocktail logo", class:"avatar-large" %>
+</div>
+<div class="banner mb-1">
+  <div class="banner-overlay-dark">
+      <div class="banner-content text-center">
+        <h1>Homemade Cocktails</h1>
+        <h2>Make your own cocktails for your next party.</h2>
+      </div>
+  </div>
+</div>
+<div>
+  <h3 class="pt-5 pb-3 text-center">Choose a cocktail</h3>
+</div>
+
+<div class="cards-container d-flex align-items-center mx-5">
+  <div class="row">
+<% @cocktails.each do |cocktail| %>
+
+    <div class="col-12 col-md-6 col-lg-3">
+    <div class="card-container mt-4">
+      <%= image_tag "mojito.jpg", alt: "Mojito", class:"card-product-image" %>
+      <div class="card-product-content p-3 text-center">
+        <h4 class="p-2"><%= cocktail.name.capitalize %></h3>
+        <div>
+          <h5><%= link_to "Learn", cocktail_path(cocktail), class:"btn btn-light" %></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+  </div>
+</div>
+
+<!--
+<h2>Card trip</h2>
+  <div class="container">
+
+    <div class="card-trip">
+      <img class="card-trip-image" src="images/athens.jpg" alt="Athens">
+      <div class="card-trip-footer">
+        <div>
+          <h2>Trip to Athens</h2>
+          <p>Discover the capital of Greece!</p>
+        </div>
+        <h3>￡179.99</h3>
+      </div>
+    </div> -->
+
+<!-- .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card-trip{
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+} -->
+
+<!-- .card-trip-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+} -->
+<!--
+.card-trip-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px;
+} -->

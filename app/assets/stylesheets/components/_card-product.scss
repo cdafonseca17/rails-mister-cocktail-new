@@ -1,0 +1,22 @@
+.card-product-content {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.card-product-image {
+    // border-top-right-radius: 5px;
+    // object-fit: cover;
+    // height: 250px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+.cards-container {
+  // float:left;
+  // margin: 0 auto;
+  max-width: 1700px;
+  margin: 0 auto;
+
+}
