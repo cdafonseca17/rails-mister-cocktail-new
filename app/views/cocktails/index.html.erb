@@ -1,6 +1,39 @@
 <div class="d-flex navbar-lewagon navbar-collapse p-4">
   <%= image_tag "logo.png", alt: "Cocktail logo", width: 80 %>
-  <%= link_to 'Add a cocktail', new_cocktail_path, class:"btn btn-light btn-lg" %>
+<!--   <%= link_to 'Add a cocktail', root_path, class:"btn btn-light btn-lg" %>
+ -->  <!-- Button trigger modal -->
+<button type="button" class="btn btn-light btn-lg" data-toggle="modal" data-target="#addcocktail">
+Add a cocktail</button>
+
+<!-- Modal -->
+<div class="modal fade" id="addcocktail" tabindex="-1" role="dialog" aria-labelledby="addcocktailLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addcocktailLabel">Add a cocktail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <%= simple_form_for [@cocktail] do |f| %>
+            <%= f.input :name %>
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+            <%= f.submit "Add a cocktail", class: "btn", style:"background-color: #E04D7B;color: white" %>
+          <% end %>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn" style="background-color: #E04D7B;color: white">Add a cocktail</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
   <%= image_tag "caroline.png", alt: "Cocktail logo", class:"avatar-large" %>
 </div>
 <div class="banner mb-1">
@@ -32,6 +65,12 @@
   </div>
 <% end %>
   </div>
+
+
+
+
+
+
 </div>
 
 <!-- app/views/articles/index.html.erb -->

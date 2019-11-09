@@ -1,15 +1,14 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    @cocktail = Cocktail.new
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
     @doses = Dose.where(cocktail_id: @cocktail.id)
-  end
-
-  def new
-    @cocktail = Cocktail.new
+    @dose = Dose.new
+    @ingredients = Ingredient.all
   end
 
   def create
