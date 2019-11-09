@@ -54,7 +54,7 @@ Add a cocktail</button>
 
     <div class="col-12 col-md-6 col-lg-3">
     <div class="card-container mt-4">
-      <%= image_tag "mojito.jpg", alt: "Mojito", class:"card-product-image" %>
+      <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill, class:"card-product-image" %>
       <div class="card-product-content p-3 text-center">
         <h4 class="p-2"><%= cocktail.name.capitalize %></h3>
         <div>
