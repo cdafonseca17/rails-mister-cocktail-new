@@ -18,7 +18,7 @@
   <li id="add-ingredient"><%= link_to 'Add ingredient', new_cocktail_dose_path(@cocktail) %></li>
 </ul>
 
-<%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 
 <%= link_to '<i class="fas fa-home fa-3x"></i>'.html_safe, cocktails_path(@cocktail), class:"icon" %>
 </div>
