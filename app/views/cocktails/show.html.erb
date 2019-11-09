@@ -3,8 +3,8 @@
     <div class="banner-item-content">
       <h1 class="text-center"><%= @cocktail.name.capitalize %></h1>
       <h2 class="text-center">Make your own <%= @cocktail.name.capitalize %>!</h2>
-      <div class="banner-item-description d-flex p-5">
-        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+      <div class="banner-item-description d-md-flex p-5">
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill, class: "pb-3" %>
         <div class="pl-3">
           <div>
             <h3>Preparation</h3>
@@ -22,7 +22,7 @@
           </div>
           <div class="pt-5">
               <!-- Button trigger modal -->
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#addingredient">
+            <button type="button" class="btn ml-0" id="btn-dose" data-toggle="modal" data-target="#addingredient">
               Add ingredient
             </button>
 
@@ -42,7 +42,7 @@
                       <%= f.input :description %>
                       <%= f.association :ingredient, collection: @ingredients %>
 
-                     <%= f.submit "Add a dose", class: "btn", style:"background-color: #E04D7B;color: white" %>
+                     <%= f.submit "Add a dose", class: "btn", style:"background-color: #ea453c;color: white" %>
                     <% end %>
                   </div>
                   <!-- <div class="modal-footer"> -->
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center pb-4">
         <%= link_to '<i class="fas fa-home fa-3x"></i>'.html_safe, root_path, class:"icon" %>
       </div>
     </div>

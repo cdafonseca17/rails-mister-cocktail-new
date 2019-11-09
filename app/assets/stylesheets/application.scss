@@ -12,9 +12,9 @@
 @import "components/index";
 @import "pages/index";
 
-body, html {
-  height: 100%;
-}
+// body, html {
+//   height: 100%;
+// }
 
 .icon {
   color: #ea453c;
@@ -22,3 +22,14 @@ body, html {
     color: #e57c77;
   }
 }
+
+#btn-dose {
+  background-color: #ea453c;
+  color: white;
+  border-radius: 6px;
+  &:hover {
+    background-color: #e57c77;
+  }
+}
+
+
